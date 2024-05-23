@@ -1,0 +1,419 @@
+// Import Design Tokens SCSS maps and helpers
+@import "node_modules/@ugent-ui/design-tokens/build/scss/_core-map";
+@import "node_modules/@ugent-ui/design-tokens/build/scss/_light-theme-map";
+@import "node_modules/@ugent-ui/design-tokens/src/utils/scss/helpers";
+
+$base-font-size: 14;
+
+html,
+body,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+img,
+pre,
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+img,
+fieldset {
+  border: 0;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: token("color-elevation-surface-basic-default", $light);
+  color: token("color-text-default", $light);
+  font-family: token("typography-sans-serif", $core);
+  font-size: $base-font-size + px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857142857143; // = 20px
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  text-decoration-skip-ink: auto;
+}
+
+/* Default margins */
+p,
+ul,
+ol,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+form,
+table {
+  margin: token("space-150", $core) 0 0 0;
+}
+
+/* Links */
+a {
+  color: token("color-link-default", $light);
+  text-decoration: none;
+}
+a:hover {
+  color: token("color-link-default", $light);
+  text-decoration: underline;
+}
+a:active {
+  color: token("color-link-pressed", $light);
+}
+a:focus-visible {
+  outline: 2px solid token("color-link-visited", $light);
+  outline-offset: token("space-025", $core);
+}
+@supports not selector(*:focus-visible) {
+  a:focus {
+    outline: 2px solid token("color-link-visited", $light);
+    outline-offset: token("space-025", $core);
+  }
+}
+
+/* Headings */
+.h900 {
+  font: var(
+    --font-heading-xxlarge,
+    500 px-to-rem(35, $base-font-size) / px-to-rem(40, $base-font-size)
+      map-get($core, "typography-sans-serif")
+  );
+  letter-spacing: -0.01em;
+  color: token("color-text-default", $light);
+  margin-top: 52px;
+}
+
+h1,
+.h800 {
+  font: var(
+    --font-heading-xlarge,
+    600 px-to-rem(29, $base-font-size) / px-to-rem(32, $base-font-size)
+      map-get($core, "typography-sans-serif")
+  );
+  letter-spacing: -0.01em;
+  color: token("color-text-default", $light);
+  margin-top: token("space-500", $core);
+}
+h2,
+.h700 {
+  font: var(
+    --font-heading-large,
+    500 px-to-rem(24, $base-font-size) / px-to-rem(28, $base-font-size)
+      map-get($core, "typography-sans-serif")
+  );
+  letter-spacing: -0.01em;
+  color: token("color-text-default", $light);
+  margin-top: token("space-500", $core);
+}
+h3,
+.h600 {
+  font: var(
+    --font-heading-medium,
+    500 px-to-rem(20, $base-font-size) / px-to-rem(24, $base-font-size)
+      map-get($core, "typography-sans-serif")
+  );
+  letter-spacing: -0.008em;
+  color: token("color-text-default", $light);
+  margin-top: 28px;
+}
+h4,
+.h500 {
+  font: var(
+    --font-heading-small,
+    600 px-to-rem(16, $base-font-size) / px-to-rem(20, $base-font-size)
+      map-get($core, "typography-sans-serif")
+  );
+  letter-spacing: -0.006em;
+  color: token("color-text-default", $light);
+  margin-top: token("space-300", $core);
+}
+h5,
+.h400 {
+  font: var(
+    --font-heading-xsmall,
+    600 px-to-rem(14, $base-font-size) / px-to-rem(16, $base-font-size)
+      map-get($core, "typography-sans-serif")
+  );
+  letter-spacing: -0.003em;
+  color: token("color-text-default", $light);
+  margin-top: token("space-200", $core);
+}
+h6,
+.h300 {
+  font: var(
+    --font-heading-xxsmall,
+    600 px-to-rem(12, $base-font-size) / px-to-rem(16, $base-font-size)
+      map-get($core, "typography-sans-serif")
+  );
+  letter-spacing: -0.003em;
+  color: token("color-text-default", $light);
+  margin-top: token("space-150", $core);
+  text-transform: uppercase;
+}
+
+.h200 {
+  font: var(
+    --font-heading-xxxsmall,
+    600 px-to-rem(12, $base-font-size) / px-to-rem(16, $base-font-size)
+      map-get($core, "typography-sans-serif")
+  );
+  color: token("color-text-default", $light);
+  margin-top: token("space-100", $core);
+}
+
+.h100 {
+  font: var(
+    --font-heading-xxxxsmall,
+    700 px-to-rem(11, $base-font-size) / px-to-rem(16, $base-font-size)
+      map-get($core, "typography-sans-serif")
+  );
+  color: token("color-text-default", $light);
+  margin-top: token("space-050", $core);
+}
+
+/* Lists */
+ul,
+ol,
+dl {
+  padding-left: token("space-500", $core);
+}
+
+dd,
+dd + dt,
+li + li {
+  margin-top: token("space-50", $core);
+}
+ul ul:not(:first-child),
+ol ul:not(:first-child),
+ul ol:not(:first-child),
+ol ol:not(:first-child) {
+  margin-top: token("space-50", $core);
+}
+
+/* remove top margin for first element */
+p:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+blockquote:first-child,
+pre:first-child,
+form:first-child,
+table:first-child,
+.h900:first-child,
+.h800:first-child,
+.h700:first-child,
+.h600:first-child,
+.h500:first-child,
+.h400:first-child,
+.h300:first-child,
+.h200:first-child,
+.h100:first-child {
+  margin-top: 0;
+}
+
+/* Quotes */
+blockquote,
+q {
+  color: inherit;
+}
+blockquote {
+  border: none;
+  padding-left: token("space-500", $core);
+}
+[dir="rtl"] blockquote {
+  padding-left: 0;
+  padding-right: token("space-500", $core);
+}
+
+blockquote::before,
+q::before {
+  content: "\201C";
+}
+
+blockquote::after,
+q::after {
+  content: "\201D";
+}
+
+blockquote::before {
+  float: left;
+  /* to keep the quotes left of any child elements like blockquote > p */
+  margin-left: -1em;
+  text-align: right;
+  width: 1em;
+}
+[dir="rtl"] blockquote::before {
+  float: right;
+  margin-right: -1em;
+  text-align: left;
+}
+
+blockquote > :last-child {
+  display: inline-block; /* so the quotes added via pseudos follow it immediately. */
+}
+
+/* Other typographical elements */
+small {
+  font-size: 0.7857142857142857em;
+  font-style: inherit;
+  line-height: 1.4545454545454546;
+  color: token("color-text-subtlest", $light);
+  font-weight: var(--font-weight-bold, 700);
+  margin-top: 16px;
+  font-weight: normal;
+}
+
+code,
+kbd {
+  font-family: token("typography-monospaced", $core);
+}
+
+var,
+address,
+dfn,
+cite {
+  font-style: italic;
+}
+
+abbr {
+  border-bottom: 1px token("color-border-default", $light) dotted;
+  cursor: help;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead,
+tbody,
+tfoot {
+  border-bottom: 2px solid token("color-border-default", $light);
+}
+
+td,
+th {
+  border: none;
+  padding: token("space-50", $core) token("space-100", $core);
+  text-align: left;
+}
+
+th {
+  vertical-align: top;
+}
+
+td:first-child,
+th:first-child {
+  padding-left: 0;
+}
+
+td:last-child,
+th:last-child {
+  padding-right: 0;
+}
+
+caption {
+  font: var(
+    --font-heading-medium,
+    500 1.4285714285714286em/1.2 map-get($core, "typography-sans-serif")
+  );
+  letter-spacing: -0.008em;
+  color: token("color-text-default", $light);
+  margin-top: 28px;
+  margin-bottom: token("space-100", $core);
+  text-align: left;
+}
+
+/**
+ * Ensures compatibility with user's preferred color scheme (light or dark)
+ * by applying appropriate color themes to elements marked with `data-color-mode`.
+ * This enhances UI consistency across different operating systems and browsers
+ * that support the `color-scheme` property.
+ */
+@supports (color-scheme: dark) and (color-scheme: light) {
+  [data-color-mode="light"] {
+    color-scheme: light;
+  }
+  [data-color-mode="dark"] {
+    color-scheme: dark;
+  }
+}
+
+/* IE11 and some older browsers don't support these elements yet and treat them as
+ * display: inline;
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Suppress the ugly broken image styling in Firefox */
+@-moz-document url-prefix() {
+  img {
+    font-size: 0;
+  }
+  img:-moz-broken {
+    font-size: inherit;
+  }
+}
+
+/*
+ * Chrome 83.0.4103.61 introduced a new user-agent style that broke all buttons for us.
+ * This default override reverts it.
+ * chrome user agent added this => font: 400 13.3333px Arial;
+*/
+button {
+  font-family: inherit;
+}
+
+/*
+ * Use this class for content such as skip links, error messages, or 
+ * additional descriptions that should be available for screen readers but do not need
+ * to be visible on the main interface. It ensures that accessibility features are in 
+ * place without affecting the visual design or layout of the page.
+*/
+.assistive {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Reset</title>
+
+    <style>
+      section {
+        padding: var(--space-200, 16px) var(--space-200, 16px)
+          var(--space-400, 32px);
+      }
+      header {
+        margin-bottom: var(--space-200, 16px);
+      }
+      header h2 a::before {
+        content: "# ";
+      }
+      .theme-switcher-wrapper {
+        position: fixed;
+        top: var(--space-200, 16px);
+        right: var(--space-200, 16px);
+        z-index: 1000;
+      }
+      .title {
+        padding: var(--space-200, 16px) var(--space-200, 16px)
+          var(--space-400, 32px);
+      }
+    </style>
+    <script type="module" src="/theme-switcher.es.js"></script>
+    <script type="module" crossorigin src="/assets/index-k-JtT3dI.js"></script>
+    <link rel="stylesheet" crossorigin href="/reset.css">
+  </head>
+  <body>
+    <div class="theme-switcher-wrapper">
+      <ug-theme-switcher></ug-theme-switcher>
+    </div>
+    <div id="demo"></div>
+  </body>
+</html>
