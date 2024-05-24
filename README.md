@@ -6,6 +6,10 @@ De basis stylesheet voor het UGent UI Design System.
 
 Dit pakket exporteert een CSS-bestand dat een minimale reset en basisstijlen voor veel HTML-elementen biedt. Het is bedoeld als basis voor alle verdere styling, wat zorgt voor een consistente en gestroomlijnde uitstraling van de applicaties. Het UGent UI Design System is op deze fundering gebouwd om ervoor te zorgen dat alle elementen naadloos integreren en een uniforme gebruikerservaring bieden.
 
+## Demo
+
+https://ugentui.github.io/css-reset/
+
 ## Installatie
 
 ```bash
