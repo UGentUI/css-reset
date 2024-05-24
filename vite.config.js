@@ -2,6 +2,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  base: "/css-reset/",
   css: {
     preprocessorOptions: {
       scss: {
