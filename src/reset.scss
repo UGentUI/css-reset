@@ -39,7 +39,7 @@ html {
 body {
   background-color: token("color-elevation-surface-basic-default", $light);
   color: token("color-text-default", $light);
-  font-family: token("typography-sans-serif", $core);
+  font-family: token("font-family-sans-serif", $core);
   font-size: $base-font-size + px;
   font-style: normal;
   font-weight: 400;
@@ -94,7 +94,7 @@ a:focus-visible {
   font: var(
     --font-heading-xxlarge,
     500 px-to-rem(35, $base-font-size) / px-to-rem(40, $base-font-size)
-      map-get($core, "typography-sans-serif")
+      map-get($core, "font-family-sans-serif")
   );
   letter-spacing: -0.01em;
   color: token("color-text-default", $light);
@@ -106,7 +106,7 @@ h1,
   font: var(
     --font-heading-xlarge,
     600 px-to-rem(29, $base-font-size) / px-to-rem(32, $base-font-size)
-      map-get($core, "typography-sans-serif")
+      map-get($core, "font-family-sans-serif")
   );
   letter-spacing: -0.01em;
   color: token("color-text-default", $light);
@@ -117,7 +117,7 @@ h2,
   font: var(
     --font-heading-large,
     500 px-to-rem(24, $base-font-size) / px-to-rem(28, $base-font-size)
-      map-get($core, "typography-sans-serif")
+      map-get($core, "font-family-sans-serif")
   );
   letter-spacing: -0.01em;
   color: token("color-text-default", $light);
@@ -128,7 +128,7 @@ h3,
   font: var(
     --font-heading-medium,
     500 px-to-rem(20, $base-font-size) / px-to-rem(24, $base-font-size)
-      map-get($core, "typography-sans-serif")
+      map-get($core, "font-family-sans-serif")
   );
   letter-spacing: -0.008em;
   color: token("color-text-default", $light);
@@ -139,7 +139,7 @@ h4,
   font: var(
     --font-heading-small,
     600 px-to-rem(16, $base-font-size) / px-to-rem(20, $base-font-size)
-      map-get($core, "typography-sans-serif")
+      map-get($core, "font-family-sans-serif")
   );
   letter-spacing: -0.006em;
   color: token("color-text-default", $light);
@@ -150,7 +150,7 @@ h5,
   font: var(
     --font-heading-xsmall,
     600 px-to-rem(14, $base-font-size) / px-to-rem(16, $base-font-size)
-      map-get($core, "typography-sans-serif")
+      map-get($core, "font-family-sans-serif")
   );
   letter-spacing: -0.003em;
   color: token("color-text-default", $light);
@@ -161,7 +161,7 @@ h6,
   font: var(
     --font-heading-xxsmall,
     600 px-to-rem(12, $base-font-size) / px-to-rem(16, $base-font-size)
-      map-get($core, "typography-sans-serif")
+      map-get($core, "font-family-sans-serif")
   );
   letter-spacing: -0.003em;
   color: token("color-text-default", $light);
@@ -173,7 +173,7 @@ h6,
   font: var(
     --font-heading-xxxsmall,
     600 px-to-rem(12, $base-font-size) / px-to-rem(16, $base-font-size)
-      map-get($core, "typography-sans-serif")
+      map-get($core, "font-family-sans-serif")
   );
   color: token("color-text-default", $light);
   margin-top: token("space-100", $core);
@@ -183,7 +183,7 @@ h6,
   font: var(
     --font-heading-xxxxsmall,
     700 px-to-rem(11, $base-font-size) / px-to-rem(16, $base-font-size)
-      map-get($core, "typography-sans-serif")
+      map-get($core, "font-family-sans-serif")
   );
   color: token("color-text-default", $light);
   margin-top: token("space-050", $core);
@@ -340,7 +340,7 @@ th:last-child {
 caption {
   font: var(
     --font-heading-medium,
-    500 1.4285714285714286em/1.2 map-get($core, "typography-sans-serif")
+    500 1.4285714285714286em/1.2 map-get($core, "font-family-sans-serif")
   );
   letter-spacing: -0.008em;
   color: token("color-text-default", $light);
