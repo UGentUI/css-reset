@@ -31,7 +31,7 @@ De CSS-reset moet de eerste stylesheet op je pagina zijn. Alle andere CSS styles
     <title></title>
     <link
       rel="stylesheet"
-      href="node_modules/@ugent-ui/css-reset/dist/assets/reset.css"
+      href="node_modules/@ugent-ui/css-reset/dist/reset.css"
     />
     <!-- andere CSS styles -->
   </head>
