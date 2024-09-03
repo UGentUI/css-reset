@@ -37,7 +37,7 @@ html {
 }
 
 body {
-  background-color: token("color-elevation-surface-basic-default", $light);
+  background-color: token("elevation-surface-basic-default", $light);
   color: token("color-text-default", $light);
   font-family: token("font-family-sans-serif", $core);
   font-size: $base-font-size + px;
